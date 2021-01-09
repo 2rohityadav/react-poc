@@ -1,7 +1,7 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 import './App.css';
-import { config } from './constants';
+import { envConfig } from './constants';
 
 const App = () => {
   React.useEffect(()=> {
@@ -45,15 +45,13 @@ const App = () => {
     <div className='app'>
       <div className='card'>
         <h1 className='title'>Our React is working :)</h1>
-        Base URL:- {config.url.BASE_URL}
+        Base URL:- {envConfig.url.BASE_URL}
         <button className="proceed-btn" onClick={submit}>
       Proceed
     </button>
       </div>
     </div>
-
-  )};
+  )
+};
 
 export default App;
-
-
